@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos</title>
+    <!-- Enlaces a los archivos CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a tu archivo productos.css -->
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <header id="inicio"> <!-- Agrega el ID "inicio" aquí -->
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Tienda</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a> <!-- Cambia el href a "index.html" -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mt-5">
+        <!-- Contenido de la página de productos -->
+        <h2>Nuestras Tiendas</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Tienda Solo Gorras.      tel.-555-123-4567-  direc. -Calle Principal 123-     -Ciudad  -Hermosillo-      ¡Descubre la calidad a precios increíbles!</li>
+<li class="list-group-item">Tienda solo pantalones.  tel.-555-234-5678-  direc. -Avenida Central 456-    -Ciudad -Guadalajara-     ¡No te pierdas nuestras ofertas especiales!</li>
+<li class="list-group-item">Tienda Variada.          tel.-555-345-6789-  direc. -Carrera 7 #89-10-        -Ciudad -Tamaulipas-      ¡Envío gratuito en todos nuestros productos!</li>
+<li class="list-group-item">Tienda por mayoreo.      tel.-555-456-7890-  direc. -Calle 10 #23-45-         -Ciudad -Madrid-          ¡Descubre la calidad a precios increíbles!</li>
+<li class="list-group-item">Envios toda la republica.tel.-555-567-8901-  direc. -Avenida Norte  678-       -Ciudad -Ciudad de México- ¡No te pierdas nuestras ofertas especiales!</li>
+<li class="list-group-item">Envios al extranjero.    tel.-555-678-9012-  direc. -Calle Sur 901-            -Ciudad -Tucson-           ¡Envío gratuito en todos nuestros productos!</li>
+
+        </ul>
+    </section>
+
+    <section class="container mt-5">
+        <!-- Formulario de contacto -->
+        <h2>Para contactarnos</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escriba su mensaje aquí"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <!-- Pie de página -->
+        <div class="container text-center">
+            <span class="text-muted">© 2024 Tienda de Productos</span>
+        </div>
+    </footer>
+
+    <!-- Enlaces a los archivos JavaScript de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

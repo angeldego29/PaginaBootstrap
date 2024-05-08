@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RopaShop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">RopaShop</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Productos</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mt-5">
+        <h1 class="text-center mb-4">Bienvenido a RopaShop</h1>
+
+        <!-- Cards de productos -->
+        <div class="row" id="product-list">
+            <!-- Productos serán insertados aquí por JavaScript -->
+        </div>
+
+        <!-- Resumen del carrito -->
+        <div class="mt-5">
+            <h2>Resumen del Carrito</h2>
+            <div id="subtotal">Subtotal: $0.00</div>
+            <div id="tax">IVA (16%): $0.00</div>
+            <div id="total">Total: $0.00</div>
+            <button class="btn btn-success mt-3 mr-2" onclick="generateTicket()">Comprar</button>
+            <button class="btn btn-danger mt-3 mr-2" onclick="cancelPurchase()">Cancelar Compra</button>
+            <button class="btn btn-warning mt-3" onclick="clearCart()">Vaciar Carrito</button>
+        </div>
+    </section>
+
+    <footer class="footer bg-light py-4">
+        <div class="container">
+            <span class="text-muted">© 2024 RopaShop</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Función para generar el ticket de compra
+        function generateTicket() {
+            // Obtener los datos del carrito
+            const subtotal = document.getElementById('subtotal').textContent;
+            const tax = document.getElementById('tax').textContent;
+            const total = document.getElementById('total').textContent;
+
+            // Contenido del ticket
+            const ticketContent = `
+                <h2>Ticket de Compra</h2>
+                <p>Dirección: Avenida Principal 123 <p>
+                <p>${subtotal}</p>
+                <p>${tax}</p>
+                <p>${total}</p>
+                <p>Ropa Shop</p>
+                <p>Gracias por su compra.</p>
+            `;
+
+            // Abrir una ventana emergente con el ticket
+            const ticketWindow = window.open('', '_blank', 'width=400,height=200');
+            ticketWindow.document.write(ticketContent);
+            ticketWindow.document.close();
+        }
+
+        // Función para cancelar la compra
+        function cancelPurchase() {
+            // Aquí puedes agregar la lógica para cancelar la compra
+            alert("Compra cancelada");
+        }
+
+        // Función para vaciar el carrito
+        function clearCart() {
+            cart = []; // Vaciar el array de productos en el carrito
+            updateCartSummary(); // Actualizar el resumen del carrito
+        }
+    </script>
+</body>
+</html>
+
+
+
+
